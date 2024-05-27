@@ -6,10 +6,9 @@ from response import Response
 
 app = Flask(__name__)
 
-
-@app.route("/", methods=["GET"])
-def get_books():
-    return "hello world"
+@app.route('/')
+def hello_world():
+    return jsonify(message="Hello, World!")
 
 
 @app.route(Route.encrypt, methods=["POST"])
